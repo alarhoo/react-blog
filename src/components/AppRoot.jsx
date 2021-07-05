@@ -1,5 +1,5 @@
 import Header from './Header';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 import GridPosts from './GridPosts';
 import PostDetailed from './PostDetailed';
 import About from './About';
@@ -12,7 +12,7 @@ import NotFound from './NotFound';
 const AppRoot = () => {
   return (
     <div>
-      <BrowserRouter>
+      <HashRouter>
         <Header />
         <Switch>
           <Route path="/" component={GridPosts} exact />
@@ -28,7 +28,7 @@ const AppRoot = () => {
           </Route>
           <Route component={NotFound} />
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 };
