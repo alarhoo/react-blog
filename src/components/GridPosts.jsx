@@ -1,12 +1,13 @@
-import { useEffect, useState } from 'react';
-import Post from './Post';
-import axios from '../config/axiosConfig';
-import { Container, Row } from 'react-bootstrap';
+import React from "react";
+import { useEffect, useState } from "react";
+import Post from "./Post";
+import axios from "../config/axiosConfig";
+import { Container, Row } from "react-bootstrap";
 
 const GridPosts = () => {
   const [postsData, setPostsData] = useState([]);
   useEffect(() => {
-    axios.get('/posts').then((response) => {
+    axios.get("/posts").then((response) => {
       console.log(response);
       if (response.status === 200) {
         setPostsData(response.data);

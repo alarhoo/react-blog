@@ -1,14 +1,16 @@
 // @ts-nocheck
-import { useState } from 'react';
-import { Form, Button, Col, Row, Card } from 'react-bootstrap';
-import axios from '../config/axiosConfig';
-import { useHistory } from 'react-router-dom';
+import React from "react";
+
+import { useState } from "react";
+import { Form, Button, Col, Row, Card } from "react-bootstrap";
+import axios from "../config/axiosConfig";
+import { useHistory } from "react-router-dom";
 
 const NewPost = () => {
   // maintaing newPost state
   const [newPostData, setNewPostData] = useState({
-    title: '',
-    body: '',
+    title: "",
+    body: "",
   });
   const history = useHistory();
 
@@ -16,11 +18,11 @@ const NewPost = () => {
     evt.preventDefault();
     console.log(newPostData);
     const options = {
-      url: '/posts',
-      method: 'POST',
+      url: "/posts",
+      method: "POST",
       headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json;charset=UTF-8',
+        Accept: "application/json",
+        "Content-Type": "application/json;charset=UTF-8",
       },
       data: newPostData,
     };
@@ -38,8 +40,14 @@ const NewPost = () => {
   }
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <Card className="mt-4" style={{ width: '750px' }}>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Card className="mt-4" style={{ width: "750px" }}>
         <Card.Header>
           <Card.Title>Add New Post</Card.Title>
         </Card.Header>

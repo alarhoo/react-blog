@@ -1,41 +1,72 @@
-import { Link, NavLink } from 'react-router-dom';
-import { Navbar } from 'react-bootstrap';
+import React from "react";
+
+import { Link, NavLink } from "react-router-dom";
+import { Navbar } from "react-bootstrap";
 
 const Header = () => {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Link className="navbar-brand nav-item nav-link" to="/">
+    <Navbar collapseOnSelect sticky="top" expand="lg" bg="dark" variant="dark">
+      <Link exact className="navbar-brand nav-item nav-link" to="/">
         React-Blog
       </Link>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <div className="navbar-nav mr-auto">
-          <NavLink className="nav-item nav-link" to="/" activeClassName="active">
+          <NavLink
+            exact
+            className="nav-item nav-link"
+            to="/"
+            activeClassName="active"
+          >
             Home
           </NavLink>
-          <NavLink className="nav-item nav-link" to="/about" activeClassName="active">
+          <NavLink
+            className="nav-item nav-link"
+            to="/about"
+            activeClassName="active"
+          >
             About
           </NavLink>
         </div>
         {/* Navbar Right Side */}
         <div className="navbar-nav">
           {/* {% if current_user.is_authenticated %} */}
-          <Link className="nav-item nav-link" to="/new_post">
+          <NavLink
+            className="nav-item nav-link"
+            to="/new_post"
+            activeClassName="active"
+          >
             New Post
-          </Link>
-          <Link className="nav-item nav-link" to="/account">
+          </NavLink>
+          <NavLink
+            className="nav-item nav-link"
+            to="/account"
+            activeClassName="active"
+          >
             Account
-          </Link>
-          <Link className="nav-item nav-link" to="/logout">
+          </NavLink>
+          <NavLink
+            className="nav-item nav-link"
+            to="/logout"
+            activeClassName="active"
+          >
             Logout
-          </Link>
+          </NavLink>
           {/* {% else %} */}
-          <Link className="nav-item nav-link" to="/login">
+          <NavLink
+            className="nav-item nav-link"
+            to="/login"
+            activeClassName="active"
+          >
             Login
-          </Link>
-          <Link className="nav-item nav-link" to="/register">
+          </NavLink>
+          <NavLink
+            className="nav-item nav-link"
+            to="/register"
+            activeClassName="active"
+          >
             Register
-          </Link>
+          </NavLink>
           {/* {% endif %} */}
         </div>
       </Navbar.Collapse>

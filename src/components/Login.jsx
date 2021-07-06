@@ -1,9 +1,17 @@
-import { Form, Button, Card } from 'react-bootstrap';
+import React from "react";
+
+import { Form, Button, Card } from "react-bootstrap";
 
 const Login = () => {
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <Card className="mt-4" style={{ width: '450px' }}>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Card className="mt-4" style={{ width: "450px" }}>
         <Card.Header>
           <Card.Title>Login to React-Blog</Card.Title>
         </Card.Header>
@@ -12,7 +20,9 @@ const Login = () => {
             <Form.Group controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
               <Form.Control type="email" placeholder="Enter email" />
-              <Form.Text className="text-muted">We'll never share your email with anyone else.</Form.Text>
+              <Form.Text className="text-muted">
+                We'll never share your email with anyone else.
+              </Form.Text>
             </Form.Group>
 
             <Form.Group controlId="formBasicPassword">

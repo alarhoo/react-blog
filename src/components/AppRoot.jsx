@@ -1,13 +1,14 @@
-import Header from './Header';
-import { HashRouter, Switch, Route } from 'react-router-dom';
-import GridPosts from './GridPosts';
-import PostDetailed from './PostDetailed';
-import About from './About';
-import Account from './Account';
-import Login from './Login';
-import NewPost from './NewPost';
-import UpdatePost from './UpdatePost';
-import NotFound from './NotFound';
+import React from "react";
+import Header from "./Header";
+import { HashRouter, Switch, Route } from "react-router-dom";
+import GridPosts from "./GridPosts";
+import PostDetailed from "./PostDetailed";
+import About from "./About";
+import Account from "./Account";
+import Login from "./Login";
+import NewPost from "./NewPost";
+import UpdatePost from "./UpdatePost";
+import NotFound from "./NotFound";
 
 const AppRoot = () => {
   return (
