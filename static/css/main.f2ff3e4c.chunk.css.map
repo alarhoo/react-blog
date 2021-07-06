@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/App.css"],"names":[],"mappings":"AAAA,UACE,eAAgB,CAChB,sBAAuB,CACvB,mBAAoB,CACpB,oBAAqB,CACrB,2BACF","file":"main.f2ff3e4c.chunk.css","sourcesContent":[".dotlines {\r\n  overflow: hidden;\r\n  text-overflow: ellipsis;\r\n  display: -webkit-box;\r\n  -webkit-line-clamp: 3;\r\n  -webkit-box-orient: vertical;\r\n}"]}
