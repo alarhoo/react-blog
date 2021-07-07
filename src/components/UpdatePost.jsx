@@ -1,16 +1,16 @@
 // @ts-nocheck
-import React from "react";
+import React from 'react';
 
-import { useState, useEffect } from "react";
-import { Form, Button, Col, Row, Card } from "react-bootstrap";
-import axios from "../config/axiosConfig";
-import { useHistory, useParams } from "react-router-dom";
+import { useState, useEffect } from 'react';
+import { Form, Button, Col, Row, Card } from 'react-bootstrap';
+import axios from '../config/axiosConfig';
+import { useHistory, useParams } from 'react-router-dom';
 
 const UpdatePost = () => {
   // maintaing existing post state
   const [updatedPostData, setUpdatedPostData] = useState({
-    title: "",
-    body: "",
+    title: '',
+    body: '',
   });
   const history = useHistory();
   const { id } = useParams();
@@ -28,10 +28,10 @@ const UpdatePost = () => {
     console.log(updatedPostData);
     const options = {
       url: `/posts/${id}`,
-      method: "PATCH",
+      method: 'PATCH',
       headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json;charset=UTF-8",
+        Accept: 'application/json',
+        'Content-Type': 'application/json;charset=UTF-8',
       },
       data: updatedPostData,
     };
@@ -51,12 +51,12 @@ const UpdatePost = () => {
   return (
     <div
       style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
       }}
     >
-      <Card className="mt-4" style={{ width: "750px" }}>
+      <Card className="mt-4" style={{ width: '750px' }}>
         <Card.Header>
           <Card.Title>Update Post</Card.Title>
         </Card.Header>
@@ -89,6 +89,7 @@ const UpdatePost = () => {
                 <Form.Control
                   as="textarea"
                   placeholder="Body"
+                  rows={5}
                   value={updatedPostData.body}
                   onChange={(e) => {
                     setUpdatedPostData({

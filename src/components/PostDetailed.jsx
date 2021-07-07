@@ -1,14 +1,14 @@
 // @ts-nocheck
-import React from "react";
-import axios from "../config/axiosConfig";
-import { useEffect, useState } from "react";
-import { Col, Card, Button } from "react-bootstrap";
-import { useParams } from "react-router-dom";
-import { useHistory } from "react-router-dom";
+import React from 'react';
+import axios from '../config/axiosConfig';
+import { useEffect, useState } from 'react';
+import { Container, Card, Button } from 'react-bootstrap';
+import { useParams } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 const PostDetailed = () => {
   const { id } = useParams();
-  const [post, setPost] = useState({ title: "", body: "" });
+  const [post, setPost] = useState({ title: '', body: '' });
   useEffect(() => {
     axios.get(`/posts/${id}`).then((response) => {
       console.log(response.data, id);
@@ -38,9 +38,9 @@ const PostDetailed = () => {
   }
 
   return (
-    <Col className="mt-3">
+    <Container className="mt-3">
       <Card>
-        <Card.Header style={{ display: "flex" }}>
+        <Card.Header style={{ display: 'flex' }}>
           <img
             alt="profile_pic"
             className="rounded-circle article-img mr-3"
@@ -48,9 +48,7 @@ const PostDetailed = () => {
           />
           <div>
             <Card.Title>{post.title.substr(0, 20)}</Card.Title>
-            <Card.Subtitle className="mb-2 text-muted">
-              {post.title.substr(0, 15)}
-            </Card.Subtitle>
+            <Card.Subtitle className="mb-2 text-muted">{post.title.substr(0, 15)}</Card.Subtitle>
           </div>
         </Card.Header>
         <Card.Body>
@@ -59,13 +57,13 @@ const PostDetailed = () => {
         <Card.Footer>
           <Button variant="primary" size="sm" onClick={handleUpdate}>
             Update
-          </Button>{" "}
+          </Button>{' '}
           <Button variant="danger" size="sm" onClick={handleDelete}>
             Delete
           </Button>
         </Card.Footer>
       </Card>
-    </Col>
+    </Container>
   );
 };
 
