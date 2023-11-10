@@ -5,7 +5,7 @@ import { Navbar } from 'react-bootstrap';
 
 const Header = () => {
   return (
-    <Navbar collapseOnSelect sticky="top" expand="lg" bg="dark" variant="dark">
+    <Navbar collapseOnSelect sticky="top" expand="lg" bg="primary" variant="dark">
       <Link className="navbar-brand nav-item nav-link" to="/">
         React-Blog
       </Link>

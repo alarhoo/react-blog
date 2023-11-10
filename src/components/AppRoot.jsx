@@ -6,6 +6,7 @@ import PostDetailed from './PostDetailed';
 import About from './About';
 import Account from './Account';
 import Login from './Login';
+import Register from './Register';
 import NewPost from './NewPost';
 import UpdatePost from './UpdatePost';
 import NotFound from './NotFound';
@@ -20,6 +21,7 @@ const AppRoot = () => {
           <Route path="/about" component={About} />
           <Route path="/account" component={Account} />
           <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
           <Route path="/new_post" component={NewPost} />
           <Route path="/post/:id" exact>
             <PostDetailed />

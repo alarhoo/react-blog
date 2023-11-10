@@ -28,7 +28,7 @@ const GridPosts = () => {
 
   useEffect(() => {
     axios
-      .get(`/posts?_page=${currPage}&_limit=9`)
+      .get(`/posts?_page=${currPage}&_limit=6`)
       .then((response) => {
         const _p = parseLinkHeader(response.headers.link);
         setPaginator(_p);
